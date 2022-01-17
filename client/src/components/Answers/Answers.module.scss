@@ -1,0 +1,56 @@
+$bordersColor: #505050;
+
+.answersList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 30px 0 0;
+  padding: 0;
+  border: 1px solid $bordersColor;
+  border-radius: 8px;
+  background-color: #303030;
+
+  @media (max-width: 1200px) {
+    flex-basis: 100%;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .item {
+    display: flex;
+    height: 100%;
+    padding: 15px 20px;
+    border-bottom: 1px solid $bordersColor;
+
+    &:last-child {
+      border: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $bordersColor;
+      transition: 0.2s;
+    }
+  }
+
+  .indicator,
+  .wrong,
+  .correct {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 15px;
+    border-radius: 50%;
+    background-color: $bordersColor;
+  }
+
+  .wrong {
+    background-color: red;
+  }
+
+  .correct {
+    background-color: green;
+  }
+}
