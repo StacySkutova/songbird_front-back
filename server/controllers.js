@@ -4,6 +4,10 @@ const {validationResult} = require("express-validator");
 const jwtToken = require("jsonwebtoken");
 const {secret} =require("./config");
 
+const generateAccessToken = (id) => {
+    return jwtToken.sign(id, secret, {expiresIn: "1h"})
+}
+
 class controllers {
     async registration(req, res) {
         try {
@@ -41,12 +45,10 @@ class controllers {
             if (!validPassword) {
                 return res.status(400).json({message:"Password has been entered incorrectly"});
             }
-            const token = jwtToken.sign(
-                {userId:user._id}, secret, {expiresIn: "1h"}
-            )
-            return res.json({token, userId:user._id, email:user.email, password:user.password});
-        } catch (err) {
-            console.log(err);
+            const token = generateAccessToken(user._id);
+            return res.json({token});
+        } catch (e) {
+
         }
     }
 }

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "react-toastify/dist/ReactToastify.css";
-import {Navigate, Route, Routes} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
 import Header from "src/components/Header/Header";
