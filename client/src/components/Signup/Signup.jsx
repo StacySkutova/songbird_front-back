@@ -23,7 +23,7 @@ const Signup = () => {
         } catch (err) {
             console.log(err)
         } finally {
-            setSubmitting(true)
+            setSubmitting(false)
         }
     }
 

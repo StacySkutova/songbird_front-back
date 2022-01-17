@@ -2,12 +2,37 @@ import React from "react";
 import "react-router";
 import { Formik } from "formik";
 import * as yup from "yup";
-import { createBrowserHistory } from "history";
+import {useNavigate} from "react-router";
 
 import styles from "src/components/Signup.module.scss";
+import axios from "axios";
 
 const Signin = () => {
-  const history = createBrowserHistory();
+    const navigate = useNavigate();
+
+    const loginHandler = async (values, { setSubmitting }) => {
+
+        const payload = {
+            email:  values.email,
+            password: values.password,
+        }
+
+        try {
+            const response = await axios.post("/api/auth/login", payload, {
+                headers: {
+                    "Content-type": "application/json"
+                }
+            })
+            console.log(response.data)
+            localStorage.setItem("values", JSON.stringify(values))
+            navigate("/profile")
+            /*history.push("/profile");*/
+        } catch (err) {
+            console.log(err)
+        } finally {
+            setSubmitting(false)
+        }
+    }
 
   const validationsSchema = yup.object().shape({
     email: yup.string().email("Enter the correct E-mail").required("Required"),
@@ -22,11 +47,7 @@ const Signin = () => {
           password: "",
         }}
         validateOnBlur
-        onSubmit={(values) => {
-          localStorage.setItem("values", JSON.stringify(values));
-          history.push("/profile");
-          window.location.reload(true);
-        }}
+        onSubmit={loginHandler}
         validationSchema={validationsSchema}
       >
         {({
