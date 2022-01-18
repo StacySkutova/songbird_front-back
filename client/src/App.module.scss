@@ -1,0 +1,35 @@
+$bordersColor: #505050;
+
+.app {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.notificationWindow {
+  max-width: 600px;
+  width: 85%;
+  height: 200px;
+  margin: 300px auto;
+  border: 1px solid $bordersColor;
+  border-radius: 8px;
+  background-color: #303030;
+  text-align: center;
+
+  .text {
+    margin-top: 40px;
+    font-size: 1.5rem;
+  }
+
+  .button{
+    width: 120px;
+    height: 40px;
+    margin-top: 30px;
+    background-color: lighten(seagreen, 35%);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+  }
+}
