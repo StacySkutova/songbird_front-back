@@ -2,4 +2,4 @@
 
 MERN stack application
 
-npm start is both - fot server and client starting
+npm start is both - for server and client starting
