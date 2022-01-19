@@ -1,5 +1,0 @@
-# игнорирование каталога node_modules
-/node_modules
-
-# игнорирование каталога .env file
-.env
