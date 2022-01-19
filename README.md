@@ -6,7 +6,7 @@ npm start is both - for server and client starting
 
 ____________________________________________________________________________________________________________________________
 
-There are some configurations that should be done inside .env.eample such as:
+There are some configurations that should be done inside the file  .env.eample  such as:
 
 PORT=SOME_PORT (port number)
 
