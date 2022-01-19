@@ -4,7 +4,7 @@ MERN stack application
 
 npm start is both - for server and client starting
 
-
+____________________________________________________________________________________________________________________________
 
 There are some configurations that should be done inside .env.eample such as:
 
