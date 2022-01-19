@@ -1,9 +1,9 @@
-import Router from "express";
+import express from "express";
 import { check } from "express-validator";
 
 import controller from "../controllers/controllers.js";
 
-const router = new Router();
+const router = express.Router();
 
 router.post(
   "/registration",
