@@ -1,0 +1,11 @@
+.answersDetails {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1200px) {
+  .answersDetails {
+    flex-wrap: wrap;
+  }
+}

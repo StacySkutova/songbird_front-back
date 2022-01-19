@@ -1,0 +1,31 @@
+.modal,
+.active {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+}
+
+.active {
+  transform: scale(1);
+}
+
+.content {
+  padding: 20px;
+  margin: 30px;
+  border-radius: 12px;
+  background-color: white;
+  font-size: 1.5rem;
+  color: black;
+}
+
+h1,
+p {
+  text-align: center;
+}
