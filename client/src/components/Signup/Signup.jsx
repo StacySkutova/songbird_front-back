@@ -18,7 +18,7 @@ const Signup = () => {
       password: values.password,
     };
     try {
-      const response = await axios.post("/api/auth/registration", payload);
+      const response = await axios.post("http://localhost:5001/api/auth/registration", payload);
       console.log(response.data);
     } catch (err) {
       setResponseStatus(err.response.status);

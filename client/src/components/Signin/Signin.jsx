@@ -20,7 +20,7 @@ const Signin = () => {
       password: values.password,
     };
     try {
-      const response = await axios.post("/api/auth/login", payload);
+      const response = await axios.post("http://localhost:5001/api/auth/login", payload);
       console.log(response.data);
       localStorage.setItem("values", JSON.stringify(values));
       navigate("/profile");
